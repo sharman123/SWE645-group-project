@@ -54,9 +54,9 @@
     <target name="init">
         <mkdir dir="build/classes"/>
         <copy includeemptydirs="false" todir="build/classes">
-            <fileset dir="src">
+            <!--fileset dir="src">
                 <exclude name="**/*.java"/>
-            </fileset>
+            </fileset-->
         </copy>
     </target>
     <target name="clean">
