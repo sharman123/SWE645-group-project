@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<title>My Web Project</title>
+<link rel="stylesheet" href="css/mycss.css">
+<meta charset="UTF-8">
+<body>
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Survey Form</b></h1>
+  <h2>Welcome to the Student Survey for <span class="w3-tag">CS Department</span></h2>
+</header>
+<form>
+<div class ="txtField" >
+  <label for="fname">First name:</label><br>
+ 
+    <input type="text" class="medtextfields" id="fname" name="fname" required>
+  
+  </div>
+   <div  class ="txtField">
+   <label for="lname">Last name:</label><br>
+  <input type="text" class="medtextfields" id="lname" name="lname" required>
+  </div>
+  <div  class ="txtField">
+  <label for="saddress">Street address:</label><br>
+  <input type="text" class="medtextfields" id="saddress" name="saddress" required>
+  </div>
+  <div  class ="txtField">
+  <label for="city">City:</label><br>
+  <input type="text" class="smalltextfields" id="city" name="city" required>
+  </div>
+  <div  class ="txtField">
+  <label for="state">State:</label><br>
+  <input type="text" class="smalltextfields" id="state" name="state" required><br><br>
+  </div>
+  
+  <label for="zip">Zip Code:</label><br>
+  <input type="number" class="smalltextfields" id="zip" name="zip" required><br><br>
+  <label for="phone">Phone number:</label><br>
+  <input type="tel" class="smalltextfields" id="phone" name="phone" required><br><br>
+  <label for="email">Email Address:</label><br>
+  <input type="email" class="medtextfields" id="email" name="email" required><br><br>
+  <label for="sdate">Date of survey:</label><br>
+  <input type="date"  class="medtextfields" id="sdate" name="sdate" required><br><br>
+  <h2>Please indicate what you liked most about the campus</h2>
+  <input type="checkbox" id="students" name="likeness">
+  <label for="students"> Students</label><br>
+  <input type="checkbox" id="location" name="likeness">
+  <label for="location"> Location</label><br>
+  <input type="checkbox" id="campus" name="campus">
+  <label for="campus"> Campus</label><br>
+  <input type="checkbox" id="atmosphere" name="atmosphere">
+  <label for="atmosphere"> Atmosphere</label><br>
+  <input type="checkbox" id="rooms" name="rooms">
+  <label for="rooms"> Dorm rooms</label><br>
+  <input type="checkbox" id="sports" name="sports">
+  <label for="sports"> Sports</label>
+  <h2>Please indicate how you became interested in the university</h2>
+  <input type="radio" id="friends" name="means">
+  <label for="students">Friends</label><br>
+  <input type="radio" id="television" name="means">
+  <label for="students">Television</label><br>
+  <input type="radio" id="internet" name="means">
+  <label for="students">Internet</label><br>
+  <input type="radio" id="other" name="means">
+  <label for="students">Other</label><br><br>
+    <h2>Likelihood of you recommending this school to other prospective students</h2>
+    <select id = "myList">
+      <option value = "1">Very Likely</option>
+      <option value = "2">Likely</option>
+      <option value = "3">Unlikely</option>
+    </select>
+  <h2>Please enter at least ten comma separated numbers ranging from 1 through 100 in the Raffle field</h2>
+  <label for="lottery">Raffle:</label><br>
+  <input type="text" class="widetextfields" id="lottery" name="lottery"><br><br>
+  <label for="comments">Additional comments:</label><br>
+  <textarea type="text" class="commentstextfields" id="comments" name="comments" placeholder="please enter yout comments"></textarea><br>
+  <input type="submit" class="button" value="Submit">
+  <input type="reset" class = "button" value="Cancel">
+  
+</form>
+</body>
+</html>
