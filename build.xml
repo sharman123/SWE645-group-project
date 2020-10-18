@@ -59,6 +59,7 @@
             </fileset>
         </copy>
     </target>
+              	
     <target name="clean">
         <delete dir="build/classes"/>
     </target>
@@ -86,7 +87,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-  	<target name="war" depends="clean, init">
+  	<target name="war" depends="clean">
   		<echo message="Creating WAR file ..." />
         <war destfile="build/MyWebProject.war" webxml="WebContent/WEB-INF/web.xml">
             <fileset dir="WebContent"/>
