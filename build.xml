@@ -53,7 +53,7 @@
     </path>
     <target name="init">
         <mkdir dir="build/classes"/>
-        <copy includeemptydirs="false" todir="build/classes">
+        <copy includeemptydirs="true" todir="build/classes">
             <fileset dir="Java Resources/src">
                 <exclude name="**/*.java"/>
             </fileset>
