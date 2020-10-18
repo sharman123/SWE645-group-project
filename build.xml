@@ -53,8 +53,8 @@
     </path>
     <target name="init">
         <mkdir dir="build/classes"/>
-        <copy includeemptydirs="true" todir="build/classes">
-            <fileset dir="WebContent">
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
