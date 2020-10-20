@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+    field.cattle.io/publicEndpoints: '[{"addresses":["35.221.3.242"],"port":80,"protocol":"TCP","serviceName":"default:swe645","allNodes":false}]'
+  creationTimestamp: "2020-10-07T02:40:57Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    app: swe645
+  name: swe645
+  namespace: default
+  resourceVersion: "34935"
+  selfLink: /api/v1/namespaces/default/services/swe645
+  uid: 71312c7c-d2eb-4b31-a195-82119a936a77
+spec:
+  clusterIP: 10.96.185.103
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32176
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: swe645
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 35.221.3.242

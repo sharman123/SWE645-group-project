@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "5"
+    field.cattle.io/publicEndpoints: '[{"addresses":["35.221.3.242"],"port":80,"protocol":"TCP","serviceName":"default:swe645","allNodes":false}]'
+  creationTimestamp: "2020-10-07T02:35:46Z"
+  generation: 8
+  labels:
+    app: swe645
+  name: swe645
+  namespace: default
+  resourceVersion: "5755366"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/swe645
+  uid: 00d670a2-1d4b-43da-bab5-0184a4699e84
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: swe645
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2020-10-18T15:09:10Z"
+      creationTimestamp: null
+      labels:
+        app: swe645
+    spec:
+      containers:
+      - image: docker.io/nsharm/swe645-group-project:latest
+        imagePullPolicy: Always
+        name: swe645-group-project
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 3
+  conditions:
+  - lastTransitionTime: "2020-10-16T05:17:34Z"
+    lastUpdateTime: "2020-10-16T05:17:34Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2020-10-07T02:35:46Z"
+    lastUpdateTime: "2020-10-18T15:09:18Z"
+    message: ReplicaSet "swe645-75767d75f4" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 8
+  readyReplicas: 3
+  replicas: 3
+  updatedReplicas: 3

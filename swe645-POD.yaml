@@ -1,0 +1,95 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/restartedAt: "2020-10-18T15:09:10Z"
+  creationTimestamp: "2020-10-18T15:09:11Z"
+  generateName: swe645-75767d75f4-
+  labels:
+    app: swe645
+    pod-template-hash: 75767d75f4
+  name: swe645-75767d75f4-qqzcx
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: swe645-75767d75f4
+    uid: 94de9c7b-81bd-4be6-b9e7-185a10af1c20
+  resourceVersion: "5755286"
+  selfLink: /api/v1/namespaces/default/pods/swe645-75767d75f4-qqzcx
+  uid: 9ab24cb5-b1cd-41f4-9fec-c1c193a67a85
+spec:
+  containers:
+  - image: docker.io/nsharm/swe645-group-project:latest
+    imagePullPolicy: Always
+    name: swe645-group-project
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-t76p7
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: gke-c-hhkm7-default-0-3f075b8b-4cw3
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-t76p7
+    secret:
+      defaultMode: 420
+      secretName: default-token-t76p7
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-18T15:09:11Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-18T15:09:12Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-18T15:09:12Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-18T15:09:11Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://7e67207f6bd14d8434d84b0345b46be84fe3d026aff8546d3fe3cfedb427e2f4
+    image: nsharm/swe645-group-project:latest
+    imageID: docker-pullable://nsharm/swe645-group-project@sha256:575c2912ea313c6f05e9a643480d76d0f4232fbe88fecae57dc432c33774ff2d
+    lastState: {}
+    name: swe645-group-project
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2020-10-18T15:09:12Z"
+  hostIP: 10.150.0.7
+  phase: Running
+  podIP: 10.96.0.26
+  podIPs:
+  - ip: 10.96.0.26
+  qosClass: BestEffort
+  startTime: "2020-10-18T15:09:11Z"
